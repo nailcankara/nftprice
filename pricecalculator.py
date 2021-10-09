@@ -1,8 +1,4 @@
 import streamlit as st
-import requests
-
-fptext = r.get("https://opensea.io/collection/non-fungible-anime-girls")
-st.write(fptext)
 
 st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
 st.write("---")
@@ -12,7 +8,13 @@ selected = st.selectbox("Choose Your Non-Fungible Anime Girl", nfag)
 
 selectedNo = int(selected.split("#")[1])+1
 
-formula = selectedNo**(0.5) / 100
+fp = 0.001
+if fp >= 0.99:
+  fp = 0.99
+  
+coef = 100-fp*100
+
+formula = selectedNo**(0.5) / coef
 
 st.write("---")
 st.write("Minimum price of choosed NFT is","**"+str(formula)+"**" , "**ETH**")
