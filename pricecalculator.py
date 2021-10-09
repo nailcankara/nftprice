@@ -1,6 +1,9 @@
 import streamlit as st
 import requests
 
+fptext = r.get("https://opensea.io/collection/non-fungible-anime-girls").text
+st.write(fptext)
+
 st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
 st.write("---")
 nfag = ["Anime Girl #"+str(i).zfill(4) for i in range(10000)]
