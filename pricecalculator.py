@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-fptext = r.get("https://opensea.io/collection/non-fungible-anime-girls").text
+fptext = r.get("https://opensea.io/collection/non-fungible-anime-girls")
 st.write(fptext)
 
 st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
