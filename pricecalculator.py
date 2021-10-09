@@ -15,6 +15,7 @@ if fp >= 0.99:
 coef = 100-fp*100
 
 formula = selectedNo**(0.5) / coef
+formula = round(formula,6)
 
 st.write("---")
 st.write("Minimum price of choosed NFT is","**"+str(formula)+"**" , "**ETH**")
