@@ -1,4 +1,5 @@
 import streamlit as st
+import requests
 
 st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
 st.write("---")
