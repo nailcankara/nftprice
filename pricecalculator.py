@@ -8,7 +8,7 @@ selected = st.selectbox("Choose Your Non-Fungible Anime Girl", nfag)
 
 selectedNo = int(selected.split("#")[1])+1
 
-fp = 0.001
+fp = st.number_input('Enter the floor price',min_value=0.001,step=0.001)
 if fp >= 0.99:
   fp = 0.99
   
