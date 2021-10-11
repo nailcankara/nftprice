@@ -4,7 +4,7 @@ st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
 st.write("---")
 nfag = ["Anime Girl #"+str(i).zfill(4) for i in range(10000)]
 
-fp = st.number_input('Enter the floor price ETH',value=0.001,min_value=0.0,step=0.1)
+fp = st.number_input('Enter the floor price ETH',value=0.001,min_value=0.0,step=0.001,format="%f")
 selected = st.selectbox("Choose Your Non-Fungible Anime Girl", nfag)
 
 selectedNo = int(selected.split("#")[1])+1
