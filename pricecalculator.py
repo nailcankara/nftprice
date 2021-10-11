@@ -11,7 +11,7 @@ selectedNo = int(selected.split("#")[1])+1
 
 
 if fp >= 0.99:
-  fp = 0.99
+  fp = 0.99 + fp/10001
   
 coef = 100-fp*100
 
