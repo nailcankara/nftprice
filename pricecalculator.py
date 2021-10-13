@@ -21,4 +21,5 @@ st.write("---")
 st.write("Minimum price of choosed NFT is","**"+str(formula)+"**" , "**ETH**")
 
 allP = pd.DataFrame([(i**0.5)/(100-fp*100) for i in range(1,10001)],columns=["Prices"])
-sns.lineplot(allP,x=allP.index,y=allP.Prices
+sns.lineplot(allP,x=allP.index,y=allP.Prices)
+st.pyplot()
