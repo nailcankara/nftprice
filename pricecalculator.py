@@ -25,9 +25,6 @@ st.write("---")
 
 
 
-allP = pd.DataFrame([(i**0.5)/(100-fp*100) for i in range(1,10001)],columns=["Prices"])
-#sns.lineplot(x=allP.index,y=allP.Prices.values)
-#st.pyplot(fig)
 
-plt.plot(range(10000), [(i**0.5)/(100-fp*100) for i in range(1,10001)])
-plt.show()
+fig = plt.plot(range(10000), [(i**0.5)/(100-fp*100) for i in range(1,10001)])
+st.pyplot(fig)
