@@ -17,3 +17,6 @@ formula = round(formula,6)
 
 st.write("---")
 st.write("Minimum price of choosed NFT is","**"+str(formula)+"**" , "**ETH**")
+
+allP = [(i**0.5)/(100-fp*100) for i in range(1,10001)]
+st.write(allP)
