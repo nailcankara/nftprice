@@ -1,5 +1,5 @@
 import streamlit as st
-import matplotlib.pyplot as plt
+import seaborn as sns
 
 st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
 st.write("---")
