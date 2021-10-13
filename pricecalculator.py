@@ -2,6 +2,7 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
 st.write("---")
