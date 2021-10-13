@@ -1,5 +1,6 @@
 import streamlit as st
 import seaborn as sns
+import pandas as pd
 
 st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
 st.write("---")
@@ -19,5 +20,5 @@ formula = round(formula,6)
 st.write("---")
 st.write("Minimum price of choosed NFT is","**"+str(formula)+"**" , "**ETH**")
 
-allP = [(i**0.5)/(100-fp*100) for i in range(1,10001)]
-st.write(allP)
+allP = pd.DataFrame([(i**0.5)/(100-fp*100) for i in range(1,10001)],columns=["Prices"])
+sns.lineplot(allP,x=allP.index,y=allP.Prices
