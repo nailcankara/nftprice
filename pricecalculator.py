@@ -27,5 +27,5 @@ st.write("---")
 
 
 
-fig = px.line(x=["#"+str(i).zfill(4) for i range(10000)], y=[(i**0.5)/(100-fp*100) for i in range(1,10001)], title='All Prices')
+fig = px.line(x=["#"+str(i).zfill(4) for i in range(10000)], y=[(i**0.5)/(100-fp*100) for i in range(1,10001)], title='All Prices')
 st.write(fig)
