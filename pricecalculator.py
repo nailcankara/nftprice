@@ -1,7 +1,8 @@
 import streamlit as st
-import seaborn as sns
-import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
+import plotly.express as px
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.subheader("NFT Worth Calculator for Non-Fungible Anime Girls")
@@ -26,5 +27,5 @@ st.write("---")
 
 
 
-fig = plt.plot(range(10000), [(i**0.5)/(100-fp*100) for i in range(1,10001)])
-st.pyplot(fig)
+fig = px.line(x=range(10000), y=[(i**0.5)/(100-fp*100) for i in range(1,10001)], title='All Prices')
+st.write(fig)
